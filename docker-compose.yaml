@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  nginx:
+    container_name: btt_nginx
+    image: nginx
+    ports:
+      - '8000:80'
+    volumes:
+      - .:/var/www/html
+      - ./etc/nginx:/etc/nginx
+    depends_on:
+      - php
+
+  php:
+    container_name: btt_php
+    build: .
+    volumes:
+      - .:/var/www/html
+
+  db:
+    container_name: btt_db
+    image: mysql:8
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./entrypoint/mysql/entrypoint.sh:/entrypoint.sh
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: btt
+      MYSQL_DATABASE_CHARSET: utf8
+      MYSQL_DATABASE_COLLATE: utf8_unicode_ci
+      MYSQL_USER: btt
+      MYSQL_PASSWORD: btt
