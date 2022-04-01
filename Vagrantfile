@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
   config.vm.network "private_network", ip: "192.168.33.34"
-  config.vm.synced_folder "./", "/var/www/html", :owner => "www-data", :group => "www-data"
+  config.vm.synced_folder "./", "/var/www/html", :owner => "www-data", :group => "www-data", type: "rsync", rsync__exclude: "./vendor"
 
   config.vm.provider "virtualbox" do |vb|
     vb.name = "bbe-test-task"

@@ -1,5 +1,6 @@
 .idea
 .vagrant
+.vendor/
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -10,6 +11,6 @@
 ###< symfony/framework-bundle ###
 
 ###> lexik/jwt-authentication-bundle ###
-#/config/jwt/*.pem
+/config/jwt/*.pem
 ###< lexik/jwt-authentication-bundle ###
 /ubuntu-xenial-16.04-cloudimg-console.log
