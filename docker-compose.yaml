@@ -3,9 +3,10 @@ version: "3.8"
 services:
   nginx:
     container_name: btt_nginx
-    image: nginx
+    image: nginx:1.19
+    restart: always
     ports:
-      - '8000:80'
+      - '80:80'
     volumes:
       - .:/var/www/html
       - ./etc/nginx:/etc/nginx
@@ -32,3 +33,8 @@ services:
       MYSQL_DATABASE_COLLATE: utf8_unicode_ci
       MYSQL_USER: btt
       MYSQL_PASSWORD: btt
+
+  gui:
+    container_name: btt_gui
+    build: ./front-app
+    restart: always

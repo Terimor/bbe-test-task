@@ -8,6 +8,8 @@ RUN apt-get update \
 RUN docker-php-ext-install mysqli pdo pdo_mysql zip \
     && docker-php-ext-enable pdo_mysql
 
-RUN chmod -R 777 /var/www/html
+#does not work with volumes. only for prod build usage
+RUN chown -R www-data:www-data /var/www
+RUN chmod -R 777 /var/www
 
 USER www-data

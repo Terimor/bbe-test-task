@@ -1,0 +1,3 @@
+jms_serializer:
+    property_naming:
+        id: 'jms_serializer.identical_property_naming_strategy'

@@ -1,7 +1,13 @@
 controllers:
-    resource: ../src/Controller/
+    resource: ../src/Api/Controller/
     type: annotation
 
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+api_login_check:
+    path: /api/token/login
+
+gesdinet_jwt_refresh_token:
+    path: /api/token/refresh
