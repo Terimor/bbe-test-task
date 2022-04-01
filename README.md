@@ -1,5 +1,5 @@
-#Project setup
-###Requirements: VM + Vagrant installed
+# Project setup
+### Requirements: VM + Vagrant installed
 
 1. vagrant up
 2. Accessible -> 192.168.33.34
@@ -12,8 +12,8 @@ npm install
 npm run dev
 
 
-#Alternative way
-###If you don't have/don't want to install requirements mentioned in first approach, you can simply use docker + docker-compose
+# Alternative way
+### If you don't have/don't want to install requirements mentioned in first approach, you can simply use docker + docker-compose
 
 In order to setup project:
 Open docker-compose.yaml and change to nginx host port from 80 to another one available(e.g. 8000)
