@@ -7,9 +7,9 @@
 FE code in this case do not support hot reload
 
 In order to run FE in dev mode with hot reload support:
-cd ./front-app
-npm install
-npm run dev
+cd ./front-app  
+npm install  
+npm run dev  
 
 
 ## Alternative way
@@ -30,6 +30,6 @@ FE code in this case do not support hot reload
 Initially you need to set localhost:<port_you_set_in_docker_compose> instead of 192.168.33.34 in ./front-app/vite.config.js
 
 In order to run FE in dev mode with hot reload support:
-cd ./front-app
-npm install
-npm run dev
+cd ./front-app  
+npm install  
+npm run dev  
